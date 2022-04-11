@@ -1,0 +1,14 @@
+<nav  class="navbar navbar-light bg-light">
+  <div>
+      <a class="navbar-brand ms-3" routerLink="listing">Listing</a>
+      <a class="navbar-brand" routerLink="search">Search</a>
+      <a class="navbar-brand" routerLink="profile">Profile</a>
+      <a class="navbar-brand" routerLink="list/add">Add New Listing</a>
+  </div>
+  <div>
+      <button class="btn btn-primary" *ngIf="isLoggedIn == 'true'" (click)="onLogout()">Log Out</button>
+  <a class="navbar-brand ms3" *ngIf="isLoggedIn == 'false'" routerLink="register">Register</a>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>
